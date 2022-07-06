@@ -1,0 +1,7 @@
+name: SleepRestore
+version: '${project.version}'
+main: com.github.h5law.sleeprestore.SleepRestore
+api-version: 1.19
+authors: [ h5law ]
+description: Heals players fully and restores hunger after sleeping
+website: https://github.com/h5law
