@@ -62,10 +62,13 @@ public final class SleepRestore extends JavaPlugin {
 
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new SleepRestoreListener(this), this);
+        getCommand("sleeprestore").setExecutor(new SleepRestoreCommand(this));
     }
 
     public void restorePlayer(Player player) {
-
+        player.setHealth(20);
+        player.setFoodLevel(20);
+        debug(player, false, "{0} has been fully healed", player.displayName());
     }
 
     @Override
