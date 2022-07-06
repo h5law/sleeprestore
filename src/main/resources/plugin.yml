@@ -5,3 +5,9 @@ api-version: 1.19
 authors: [ h5law ]
 description: Heals players fully and restores hunger after sleeping
 website: https://github.com/h5law
+commands:
+  sleeprestore:
+    description: Interact with the SleepRestore player settings
+    usage: /<command>
+    aliases:
+      - sr
