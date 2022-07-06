@@ -1,5 +1,7 @@
 package com.github.h5law.sleeprestore;
 
+import net.kyori.adventure.text.TextComponent;
+import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -46,7 +48,7 @@ public final class SleepRestore extends JavaPlugin {
             }
             player.sendMessage(
                     (critical ? ChatColor.RED : ChatColor.GREEN)
-                            + "[ToolReplace] " + text);
+                            + "[SleepRestore] " + text);
         }
     }
 
@@ -68,7 +70,7 @@ public final class SleepRestore extends JavaPlugin {
     public void restorePlayer(Player player) {
         player.setHealth(20);
         player.setFoodLevel(20);
-        debug(player, false, "{0} has been fully healed", player.displayName());
+        debug(player, false, "{0} has been fully healed", PlainTextComponentSerializer.plainText().serialize(player.displayName()));
     }
 
     @Override
