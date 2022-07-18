@@ -11,11 +11,6 @@ public class SleepRestoreListener implements Listener {
 
     @EventHandler
     public void onPlayerSleepListener(PlayerDeepSleepEvent event) {
-        if (plugin.DisableSleepRestore.contains(event.getPlayer().getUniqueId())) {
-            event.setCancelled(true);
-        }
-        if (!event.isCancelled()) {
-            plugin.restorePlayer(event.getPlayer());
-        }
+        plugin.restorePlayer(event.getPlayer());
     }
 }
