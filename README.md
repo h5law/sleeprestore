@@ -4,24 +4,12 @@ This is a simple plugin for a Spigot/Paper Minecraft server that will
 automatically heal a player (health and food levels) when they trigger a
 PlayerDeepSleepEvent (sleep long enough to pass through the night/storm).
 
-Commands can be used to toggle debug messages and the health restoration
-feature itself:
-
-```
-/sleeprestore <OPTION> <ARGUMENT>
-/sr <OPTION> <ARGUMENT>
-```
-
-Options:
- - help (Shows usage)
- - debug
-   - true
-   - false (Default)
-   - NO ARG will toggle
- - restore
-   - true (Default)
-   - false
-   - NO ARG will toggle
+When multiple players are on the server the player sleeping will be healed and
+a message will be broadcasted to the server giving them the option to cancel
+the sleep event by clicking on the `[CANCEL]` text. If nobody cancels the
+event 10s after the player began sleeping the world will change to day and
+thunder/rain will be stopped. If the event is cancelled the world will stay in
+the same state and the player will just be healed.
 
 ## Dependencies
 
